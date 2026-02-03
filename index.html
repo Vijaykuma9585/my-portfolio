@@ -6,66 +6,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
+        * {
+            box-sizing: border-box;
         }
 
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #f0fdf4;
+            color: #022c22;
+            line-height: 1.75;
+        }
+
+        /* HEADER */
         header {
-            background: linear-gradient(135deg, #2563eb, #22d3ee);
-            color: white;
-            padding: 60px 20px;
+            background-color: #ecfdf5;
+            padding: 70px 20px;
             text-align: center;
+            border-bottom: 3px solid #059669;
         }
 
         header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+            margin: 0;
+            font-size: 44px;
+            color: #022c22;
+            font-weight: 700;
         }
 
         header p {
+            margin-top: 12px;
             font-size: 18px;
+            color: #064e3b;
+            font-weight: 500;
         }
 
+        /* SECTIONS */
         section {
-            padding: 40px 20px;
-            max-width: 1000px;
-            margin: auto;
+            max-width: 950px;
+            margin: 50px auto;
+            padding: 0 20px;
         }
 
         h2 {
-            color: #38bdf8;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #38bdf8;
-            display: inline-block;
-            padding-bottom: 5px;
+            font-size: 26px;
+            margin-bottom: 22px;
+            color: #022c22;
+            border-left: 6px solid #059669;
+            padding-left: 14px;
+            font-weight: 700;
         }
 
         .card {
-            background: #1e293b;
+            background-color: #ffffff;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            margin-bottom: 28px;
+        }
+
+        .card p {
+            font-size: 16.5px;
+            color: #022c22;
+        }
+
+        /* SKILLS */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-box {
+            background-color: #d1fae5;
+            color: #022c22;
             padding: 20px;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            border: 2px solid #059669;
         }
 
-        .skills span {
-            display: inline-block;
-            background: #2563eb;
-            color: white;
-            padding: 8px 14px;
-            border-radius: 20px;
-            margin: 6px;
-            font-size: 14px;
+        .skill-box small {
+            display: block;
+            margin-top: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #064e3b;
         }
 
+        /* CONTACT */
+        .contact p {
+            margin: 12px 0;
+            font-size: 16.5px;
+            color: #022c22;
+            font-weight: 500;
+        }
+
+        /* FOOTER */
         footer {
             text-align: center;
-            padding: 20px;
-            background: #020617;
-            color: #94a3b8;
+            padding: 24px;
+            background-color: #ecfdf5;
+            color: #064e3b;
+            font-size: 14.5px;
+            border-top: 3px solid #059669;
+            font-weight: 500;
         }
     </style>
 </head>
@@ -83,9 +129,22 @@
         <h2>About Me</h2>
         <div class="card">
             <p>
-                I am Vijayakumar, a second-year student pursuing Artificial Intelligence
-                and Data Science. I am learning programming fundamentals and building
-                simple projects to strengthen my coding and problem-solving skills.
+                I am Vijayakumar, a second-year undergraduate student pursuing
+                Artificial Intelligence and Data Science. I am focused on learning
+                programming fundamentals and developing clear, logical solutions
+                through consistent practice.
+            </p>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+        <div class="card">
+            <p>
+                <strong>Bachelor of Technology (B.Tech)</strong><br>
+                Artificial Intelligence & Data Science<br>
+                Currently in 2nd Year
             </p>
         </div>
     </section>
@@ -94,40 +153,32 @@
     <section>
         <h2>Skills</h2>
         <div class="card skills">
-            <span>Python (Basics)</span>
-            <span>Java (Basics)</span>
-            <span>C Programming</span>
-            <span>HTML</span>
-            <span>CSS</span>
+            <div class="skill-box">Python<small>Basics</small></div>
+            <div class="skill-box">Java<small>Basics</small></div>
+            <div class="skill-box">C Programming<small>Core Concepts</small></div>
+            <div class="skill-box">HTML<small>Web Structure</small></div>
+            <div class="skill-box">CSS<small>Styling</small></div>
         </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- CONTACT -->
     <section>
-        <h2>Mini Projects</h2>
-
-        <div class="card">
-            <h3>1. Student Marks Calculator (Python)</h3>
+        <h2>Contact</h2>
+        <div class="card contact">
             <p>
-                A simple Python program that takes student marks as input and
-                calculates total, average, and grade using basic conditions.
+                For internships, academic projects, or learning collaborations,
+                feel free to contact me.
             </p>
+            <p><strong>Email:</strong> vijay08kumar2007@gmail.com</p>
+            <p><strong>Phone:</strong> 8248062399</p>
         </div>
-
-        <div class="card">
-            <h3>2. Number Guessing Game (C)</h3>
-            <p>
-                A basic C program where the user guesses a randomly generated number.
-                The program gives hints like higher or lower until the correct guess.
-            </p>
-        </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
-        © 2026 Vijayakumar | Beginner Portfolio
+        © 2026 Vijayakumar | Portfolio
     </footer>
 
 </body>
 </html>
+
